@@ -5,8 +5,6 @@
     transition:5s;
 }
 
-
-
 .ex-1-square:hover {
     background-color: red;
 }
@@ -28,7 +26,7 @@
     width: 100px;
     height: 100px;
     background: red;
-    transition: 4s;
+    transition: 5s;
 }
 
 .ex-3-square:hover{
@@ -105,9 +103,37 @@
 .ex-10-icon {
     font-size: 60px;
 }
+
+.ex-10-icon {
+    animation: spin 3s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(1turn);
+    }
+}
+
+
 .ex-11-icon {
     font-size: 60px;
 }
+
+.ex-11-icon:hover {
+    animation: spin 2s linear;
+}
+@keyframes spin {
+    0% {
+        transform: rotate(0);
+    }
+    75% {
+        transform: rotate(315deg);
+    }
+    100% {
+        transform: rotate(0);
+    }
+}
+
 .ex-12-button, .ex-13-button {
     position: relative;
     display: block;
@@ -129,6 +155,49 @@
     width: 60px;
     height: 20px;
 }
+
+.ex-12-top-white, .ex-13-top-white {
+    animation: whitetopmove 3s linear;
+}
+@keyframes whitetopmove{
+    0%{
+        left: 10%
+    }
+    30%{
+        left: 40%
+    }
+    60%{
+        left: 60%
+    }
+    100%{
+        left: 100%
+    }
+ 
+    
+}
+
+.ex-12-bottom-white{
+    animation:bottomwhitemove 3s linear;
+}
+@keyframes bottomwhitemove{
+    100%{
+        left: 0%
+    }
+    60%{
+        left: 30%
+    }
+    30%{
+        left: 60%
+    }
+    0%{
+        left: 100%
+    }
+}
+    
+
+
+
+
 .ex-12-bottom-white, .ex-13-bottom-white {
     position: absolute;
     bottom: -10px;
@@ -136,4 +205,43 @@
     background: #f5f5f5;
     width: 60px;
     height: 20px;
+    }
+
+.ex-13-top-white {
+    animation: spinhalf linear 3s;
+}
+@keyframes spinhalf {
+    0%{
+        left: 0%;
+    }
+    20%{
+        left: 25%;
+    }
+    40%{
+        left: 50%;
+    }
+    70%{
+        left: 75%;
+    }
+    
+}
+
+.ex-13-bottom-white {
+    animation: spinsecondhalf linear 3s;
+    aninmation animation-delay: 3s;
+}
+@keyframes spinsecondhalf {
+    0%{
+        right: 0%;
+    }
+    20%{
+        right: 25%;
+    }
+    40%{
+        right: 50%;
+    }
+    70%{
+        right: 75%;
+    }
+ 
 }
